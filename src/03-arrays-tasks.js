@@ -586,7 +586,7 @@ function selectMany(arr, childrenSelector) {
  * @return {any} element from array
  *
  * @example
- *   [[1, 2], [3, 4], [5, 6]], [0,0]  => 1        (arr[0][0])
+ *   [[1, 2], [3, 4], [5, 6]], [0,0]  => 1        (arr[0][0])gi
  *   ['one','two','three'], [2]       => 'three'  (arr[2])
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
