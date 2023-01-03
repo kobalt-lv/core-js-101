@@ -231,7 +231,7 @@ describe('03-arrays-tasks', () => {
       const actual = tasks.insertItem(data.arr, data.item, data.index);
       assert.deepEqual(
         data.expected,
-        actual,
+        data.arr,
       );
     });
   });
