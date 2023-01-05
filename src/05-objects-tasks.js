@@ -204,16 +204,14 @@ class CssSelectorBase {
 
   checkForOrder(paramName) {
     let paramIsActive = false;
-    const correctOrderKeys = Object.keys(this.correctOrder);
-    for (let i = 0; i < correctOrderKeys.length; i += 1) {
-      const param = correctOrderKeys[i];
+    Object.keys(this.correctOrder).forEach((param) => {
       if (param === paramName) {
         this.correctOrder[param] = true;
         paramIsActive = true;
       } else if (paramIsActive && this.correctOrder[param]) {
         throw new Error('Selector parts should be arranged in the following order: element, id, class, attribute, pseudo-class, pseudo-element');
       }
-    }
+    });
   }
 }
 
